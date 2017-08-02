@@ -10,14 +10,13 @@
 
 @media only screen and (min-width: 1024px) {
   body {
-    margin: 0;
-    padding: 0; } }
+    margin: 0; } }
 
 body {
   margin: 0;
   padding: 0;
   font: 16px;
-  text-decoration: 0; }
+  box-sizing: border-box; }
 
 ul {
   margin: 0;
@@ -26,27 +25,95 @@ ul {
 li {
   list-style: none; }
 
+a {
+  text-decoration: none;
+  color: #fff; }
+
+.title {
+  font-family: "Yeseva One", cursive;
+  font-weight: 100; }
+
 .wrapper {
-  width: 78.8%;
+  width: 78%;
   margin: 0 auto; }
 
 .header {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #a7b0b8;
-  background: url("../img/bg.jpg");
+  max-height: 900px;
+  color: #fff;
+  background-color: #fff;
+  background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff; }
+  background-position: center center; }
 
-nav {
+.nav--header {
+  padding: 17px 0 0 0;
+  background-color: rgba(96, 95, 96, 0.6); }
+
+nav a:hover {
+  color: #d4a371; }
+
+.menu__wrapper {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between; }
 
-.header__logo, .header__menu {
+.header__logo, .header__menu, .soc {
+  align-self: center;
   display: flex;
   justify-content: space-between; }
 
 .header__logo {
   font-family: "Euphoria Script", cursive;
-  font-size: 40px; }
+  font-size: 45px; }
+
+.header__menu {
+  width: 60%;
+  font-family: "Alegreya SC", serif;
+  font-size: 15px; }
+
+.menu__item::before {
+  content: '~';
+  font-weight: bold;
+  margin-right: 45px; }
+
+.menu__item:first-child::before {
+  content: '';
+  display: none; }
+
+.soc__link {
+  display: inline-flex; }
+
+.header__wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center; }
+
+.header__title {
+  width: auto;
+  margin-top: 23%;
+  margin-bottom: 4%;
+  font-size: 99px;
+  text-align: center; }
+
+.dashed-line {
+  height: 10px;
+  width: 195px;
+  background-image: url("../img/dashed.png"); }
+
+.border {
+  width: 100%;
+  position: absolute;
+  bottom: -51px;
+  display: flex;
+  justify-content: center; }
+
+.round {
+  height: 106px;
+  width: 110px;
+  background-image: url("../img/border.png"); }

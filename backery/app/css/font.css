@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?65216857');
+  src: url('../font/fontello.eot?65216857#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?65216857') format('woff2'),
+       url('../font/fontello.woff?65216857') format('woff'),
+       url('../font/fontello.ttf?65216857') format('truetype'),
+       url('../font/fontello.svg?65216857#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: flex;
+  font-variant: normal;
+  align-self: center;
+  justify-content: center;
+  width:33px;
+}
+
+.icon-facebook:before { content: '\f300'; }
+.icon-twitter-bird:before { content: '\f303'; }
+.icon-instagram:before { content: '\f31e'; }
