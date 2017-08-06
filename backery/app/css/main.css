@@ -9,8 +9,29 @@
     padding: 0; } }
 
 @media only screen and (min-width: 1024px) {
-  body {
-    margin: 0; } }
+  .header__menu {
+    width: 60%; } }
+
+.header__title {
+  margin-top: 20%;
+  margin-bottom: 0;
+  font-size: 90px; }
+
+.dashed-line {
+  margin: 7% 0; }
+
+.header__small-title {
+  font-size: 24px;
+  width: 550px;
+  line-height: 26px;
+  margin: 0 0 7% 0; }
+
+.section--1, .section--2, .section--3 {
+  height: 760px; }
+
+.section--1 .wrapper {
+  grid-template-columns: 50% 50%;
+  padding: 120px 0; }
 
 body {
   margin: 0;
@@ -31,11 +52,20 @@ a {
 
 .title {
   font-family: "Yeseva One", cursive;
-  font-weight: 100; }
+  font-weight: 100;
+  text-align: center; }
+
+.small-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  text-align: center; }
 
 .wrapper {
   width: 78%;
   margin: 0 auto; }
+
+.button {
+  font-family: "Alegreya SC", serif; }
 
 .header {
   position: relative;
@@ -50,7 +80,7 @@ a {
   background-position: center center; }
 
 .nav--header {
-  padding: 17px 0 0 0;
+  padding: 15px 0 0 0;
   background-color: rgba(96, 95, 96, 0.6); }
 
 nav a:hover {
@@ -72,14 +102,13 @@ nav a:hover {
   font-size: 45px; }
 
 .header__menu {
-  width: 60%;
   font-family: "Alegreya SC", serif;
   font-size: 15px; }
 
 .menu__item::before {
   content: '~';
   font-weight: bold;
-  margin-right: 45px; }
+  margin-right: 42px; }
 
 .menu__item:first-child::before {
   content: '';
@@ -94,17 +123,22 @@ nav a:hover {
   flex-direction: column;
   align-items: center; }
 
-.header__title {
-  width: auto;
-  margin-top: 23%;
-  margin-bottom: 4%;
-  font-size: 99px;
-  text-align: center; }
-
 .dashed-line {
   height: 10px;
   width: 195px;
   background-image: url("../img/dashed.png"); }
+
+.header__button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(96, 95, 96, 0.6);
+  border: 0.5px #9e9c93 dashed; }
+
+.header__button:hover {
+  color: #d4a371; }
 
 .border {
   width: 100%;
@@ -115,5 +149,32 @@ nav a:hover {
 
 .round {
   height: 106px;
-  width: 110px;
+  width: 106px;
   background-image: url("../img/border.png"); }
+
+section .wrapper {
+  display: grid; }
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+figure {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 53% 53%;
+  grid-template-rows: 53% 53%; }
+
+.section--1 {
+  background-color: #fcfbf9; }
+
+.article__title {
+  color: #56534c;
+  font-size: 30px;
+  margin: 0 0 20px 0; }
+
+.article__small-title {
+  color: #a47d5e;
+  font-size: 10px;
+  margin: 0; }
