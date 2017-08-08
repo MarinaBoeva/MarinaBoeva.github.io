@@ -1,13 +1,3 @@
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  body {
-    margin: 0;
-    padding: 0; } }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  body {
-    margin: 0;
-    padding: 0; } }
-
 @media only screen and (min-width: 1024px) {
   .header__menu {
     width: 60%; } }
@@ -26,12 +16,28 @@
   line-height: 26px;
   margin: 0 0 7% 0; }
 
-.section--1, .section--2, .section--3 {
-  height: 760px; }
+.section--1__wrapper {
+  padding: 7% 0;
+  height: 540px; }
 
-.section--1 .wrapper {
-  grid-template-columns: 50% 50%;
-  padding: 120px 0; }
+.section--1__article {
+  width: 50%;
+  flex-direction: column;
+  justify-content: center; }
+
+.article__images {
+  width: 50%; }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    margin: 0;
+    padding: 0; } }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .section--1 .wrapper {
+    flex-wrap: wrap; }
+  .article__images, .section--1__images {
+    width: 100%; } }
 
 body {
   margin: 0;
@@ -152,27 +158,53 @@ nav a:hover {
   width: 106px;
   background-image: url("../img/border.png"); }
 
-section .wrapper {
-  display: grid; }
-
-article {
+.section--1__wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: row;
+  justify-content: space-between; }
 
-figure {
+.article__images {
   margin: 0;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
-  align-content: space-between; }
+  justify-content: space-between;
+  position: relative; }
 
-figure img {
-  height: 97%;
-  width: 97%; }
+.article__images::before {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  top: 29%;
+  left: 31.3%;
+  background-image: url("../img/cakes-des.png");
+  background-size: contain;
+  filter: opacity(90%);
+  z-index: 2;
+  background-repeat: no-repeat; }
 
-.section--1 {
-  background-color: #fcfbf9; }
+.article__image {
+  width: 95%;
+  height: 95%; }
+
+.image__shadow::after {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  box-shadow: 1px 1px 0px 6px #fff inset;
+  content: "";
+  width: 45%;
+  height: 45%; }
+
+.image__shadow:first-child::after {
+  top: 1.2%;
+  left: 1.2%; }
+
+.image__shadow:nth-child(2)::after {
+  top: 1.2%;
+  left: 51.2%; }
 
 .article__title {
   color: #56534c;

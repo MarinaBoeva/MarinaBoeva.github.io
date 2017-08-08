@@ -1,6 +1,6 @@
-@import phones
-@import tablets
 @import laptops
+@import tablets
+@import phones
 $Scriptiana:   'Euphoria Script', cursive;
 
 $Alegreya:  'Alegreya SC', serif;
@@ -110,23 +110,47 @@ nav a:hover
   height: 106px;
   width: 106px;
   background-image: url('../img/border.png');
-section .wrapper
- display: grid;
-article
+.section--1__wrapper
   display: flex;
-  flex-direction: column;
-  align-items: center;
-figure
+  flex-direction: row;
+  justify-content: space-between;
+.article__images
   margin: 0;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
-  align-content: space-between;
-figure img
-  height: 97%;
-  width: 97%;
-.section--1
-  background-color: #fcfbf9;
+  justify-content: space-between;
+  position: relative;
+.article__images::before
+ content: '';
+ display: block;
+ width: 40%;
+ height: 40%;
+ position: absolute;
+ top: 29%;
+ left: 31.3%;
+ background-image: url('../img/cakes-des.png');
+ background-size: contain;
+ filter: opacity(90%);
+ z-index: 2;
+ background-repeat: no-repeat;
+.article__image
+  width: 95%;
+  height: 95%;
+.image__shadow::after
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    box-shadow: 1px 1px 0px 6px #fff inset;
+    content: "";
+    width: 45%;
+    height: 45%;
+.image__shadow:first-child::after
+  top: 1.2%;
+  left: 1.2%;
+.image__shadow:nth-child(2)::after
+  top: 1.2%;
+  left: 51.2%;
 .article__title
   color: #56534c;
   font-size: 30px;
