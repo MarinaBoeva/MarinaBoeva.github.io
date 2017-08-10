@@ -10,6 +10,7 @@ $Yeseva:  'Yeseva One', cursive;
 $Montserrat: 'Montserrat', sans-serif;
 $brown:    #d4a371;
 $black:  rgba(96,95,96,0.6);
+$gray: #56534c;
 body
   margin: 0;
   padding: 0;
@@ -31,6 +32,12 @@ a
   font-family: $Montserrat;
   font-weight: 100;
   text-align: center;
+.text
+  font-family: $Montserrat;
+  color: $gray;
+  text-align: center;
+  font-size: 11px;
+  line-height: 20px;
 .wrapper
   width: 78%;
   margin: 0 auto;
@@ -110,10 +117,14 @@ nav a:hover
   height: 106px;
   width: 106px;
   background-image: url('../img/border.png');
-.section--1__wrapper
+.section__wrapper
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+.article
+  display: flex;
+  height: 76vh;
+  align-items: center;
 .article__images
   margin: 0;
   display: grid;
@@ -151,11 +162,19 @@ nav a:hover
 .image__shadow:nth-child(2)::after
   top: 1.2%;
   left: 51.2%;
+.image__shadow:nth-child(3)::after
+  top: 51.2%;
+  left: 1.2%;
+.image__shadow:nth-child(4)::after
+  top: 51.2%;
+  left: 51.2%;
 .article__title
-  color: #56534c;
+  color: $gray;
   font-size: 30px;
   margin: 0 0 20px 0;
 .article__small-title
   color: #a47d5e;
   font-size: 10px;
   margin: 0;
+.article__text
+  width: 72%;
